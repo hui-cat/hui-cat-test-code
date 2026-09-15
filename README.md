@@ -8,3 +8,4 @@ hui-cat的测试代码
 | 题目    | 对应文件                   |
 | ----- | ---------------------- |
 | P1006 | PopulationCapacity.cpp |
+| P1125 | Cell.cpp |
