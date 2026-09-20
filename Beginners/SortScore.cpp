@@ -6,9 +6,13 @@ struct ScoreStudent
     string name;
 };
 
-vector<ScoreStudent> BubbleSort(vector<ScoreStudent> List)
+bool compare(ScoreStudent i, ScoreStudent j)
 {
-    
+    if (i.s != j.s)
+    {
+        return i.s > j.s;
+    }
+    return i.name < j.name;
 }
 
 int main()
@@ -16,15 +20,19 @@ int main()
     int n;
     cin >> n;
     vector<ScoreStudent> students(n);
-    for (auto &&i : students)
+    for (size_t i = 0; i < n; i++)
     {
-        cin >> i.name;
-        cin >> i.s;
+        cin >> students[i].name >> students[i].s;
     }
-    sort(students.begin(), students.end());
-    for (auto &&i : students)
+    sort(students.begin(), students.end(), compare);
+    for (size_t i = 0; i < students.size(); i++)
     {
-        cout << i.name << " " << i.s << endl;
+        if (i==n-1)
+        {
+            cout << students[i].name << " " << students[i].s;
+            break;
+        }
+        cout << students[i].name << " " << students[i].s << endl;
     }
     return 0;
 }
