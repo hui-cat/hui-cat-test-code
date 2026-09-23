@@ -2,7 +2,7 @@
 using namespace std;
 void CellKilling(int x, int y); //击杀细胞函数
 int m,n;
-static int ** squareCell;
+static int ** squareCell; // 静态二维数组，存储细胞
 int main()
 {
     int s=0;
