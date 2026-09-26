@@ -13,7 +13,7 @@ bool compare(Student stu1, Student stu2)
     if (stu1.Chinese != stu2.Chinese) return stu1.Chinese > stu2.Chinese;
     return stu1.index < stu2.index;
 }
-
+// 111
 int main()
 {
     int n;
