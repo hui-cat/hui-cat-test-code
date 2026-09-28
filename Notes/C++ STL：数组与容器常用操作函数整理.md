@@ -152,6 +152,8 @@ vector<int>().swap(v); // 使用一个临时空 vector 与 v 交换，v 的内�
 **功能**：返回区间内最小值/最大值**所在的迭代器**（不是值本身）。
 **注意**：返回的是迭代器，取值需解引用 `*`。若存在多个极值，返回**第一个**出现的位置。
 
+**详细笔记**：[[C++ STL：max_element() 与 min_element()完全指南]]
+
 ```cpp
 vector<int> v = {5, 2, 8, 1, 9};
 auto it_min = min_element(v.begin(), v.end());
