@@ -15,3 +15,5 @@
 | STL：sort() 自定义比较函数完全指南                | [[C++ STL：sort() 自定义比较函数完全指南]]                |
 | STL：max_element() 与 min_element()完全指南 | [[C++ STL：max_element() 与 min_element()完全指南]] |
 | STL：迭代器（Iterator）使用方法与实战指南            | [[C++ STL：迭代器（Iterator）使用方法与实战指南]]            |
+| C++ STL：stack 容器完全指南                  | [[C++ STL：stack 容器完全指南]]                      |
+| C++ STL：queue 容器完全指南                  | [[C++ STL：queue 容器完全指南]]                      |
