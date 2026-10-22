@@ -74,7 +74,7 @@ int main()
     v_search_conclusion(chessPlate, 0);
     for (int i=0; i < conclusionSet.size(); i++)
     {
-        cout << "No." << i << endl;
+        cout << "No." << i+1 << endl;
         for(int j=0; j < 8; j++)
         {
             for(int k=0; k < 8; k++)
