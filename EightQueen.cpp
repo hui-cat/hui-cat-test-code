@@ -31,22 +31,8 @@ void v_queen_replacer(vector<string> & theChess, int row, int col, char replacer
 
 void v_search_conclusion(vector<string> & theChess, int currentQueen)
 {
-    if (currentQueen==8)
-    {
-        vector<string> ans(8);
-        copy(theChess.begin(), theChess.end(), ans.begin());
-        for (int i = 0; i < 8; i++)
-        {
-            for (int j = 0; j < 8; j++)
-            {
-                if (ans[i][j]=='1')
-                {
-                    v_queen_replacer(ans, i, j, '0');
-                    ans[i][j]='1';
-                }
-            }
-        }
-        conclusionSet.push_back(ans);
+     if (currentQueen == 8) {
+        conclusionSet.push_back(theChess);
         return;
     }
     vector<string> theChessBak(8);
@@ -74,12 +60,13 @@ int main()
     v_search_conclusion(chessPlate, 0);
     for (int i=0; i < conclusionSet.size(); i++)
     {
-        cout << "No." << i+1 << endl;
-        for(int j=0; j < 8; j++)
-        {
-            for(int k=0; k < 8; k++)
-            {
-                cout << conclusionSet[i][j][k] << " ";
+        cout << "No. " << i+1 << endl;
+        for (int j = 0; j < 8; j++) {
+            for (int k = 0; k < 8; k++) {
+                if (conclusionSet[i][k][j] == '1') cout << "1";
+                else cout << "0";
+                
+                if (k != 7) cout << " ";
             }
             cout << endl;
         }
